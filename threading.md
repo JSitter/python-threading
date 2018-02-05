@@ -9,3 +9,11 @@ Adding multithreading to your application increases the complexity of your progr
 ## How to get started
 Lets see what a simple multi-threaded pomodoro timer looks like in python. 
 
+First Thread and time must be imported into your script.
+
+~~~ from threading import Thread 
+    import time~~~
+
+
+
+Lets make a function called pomodoro that will 
