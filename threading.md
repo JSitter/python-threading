@@ -11,8 +11,10 @@ Lets see what a simple multi-threaded pomodoro timer looks like in python.
 
 First Thread and time must be imported into your script.
 
-~~~ from threading import Thread 
-    import time~~~
+~~~ 
+    from threading import Thread 
+    import time
+~~~
 
 
 
