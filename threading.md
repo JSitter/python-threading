@@ -56,3 +56,7 @@ Our new threads just need to be started and we're off!
 ~~~
 
 At this point you'll notice that the second timer will finish before the first one as we would expect. We no longer have to wait for slow code to complete before starting shorter operations.
+
+Now that we have threads started can we also shut them down?
+
+That is a story for another time.
