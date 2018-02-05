@@ -7,3 +7,5 @@ There comes a time in one's life when plain old blocking code just won't work fo
 Adding multithreading to your application increases the complexity of your program in unexpected ways. One of the pitfalls to avoid is touching the same memory location with multiple theads. Complicated interlocks must be implemented if threads need to share the same resource. This is beyond the scope of this article as this is to serve as only an introduction to further your learning. 
 
 ## How to get started
+Lets see what a simple multi-threaded pomodoro timer looks like in python. 
+
