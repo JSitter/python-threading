@@ -16,6 +16,43 @@ First Thread and time must be imported into your script.
     import time
 ~~~
 
+Lets make a function called pomodoro that will be called when we want to set a timer.
 
+~~~
+    def pomodoro(timer_name, set_time):
+        cur_time = 0
+        while cur_time < set_time:
+            time.sleep(1)
+            print(timer_name + " timer running" )
+            cur_time += 1
 
-Lets make a function called pomodoro that will 
+        print( 'POMODORO! ' + timer_name)
+~~~
+
+This is a simple function that will print out to the console on each iteration of the timer.
+If this function is run normally as such 
+
+~~~
+    pomodoro("Blocking Timer1", 3)
+    pomodoro("Blocking Timer2", 5)
+~~~ 
+
+In this example our second timer must wait for the first one to finish before it starts.
+
+With multithreading we can do a bit better.
+
+We must first instantiate a new Thread by calling it with the name of our function as well as any arguments that need to be passed into it.
+
+~~~
+    pomodoro1 = Thread(target=pomodoro, args=("Multithreaded timer 1", 8))
+    pomodoro2 = Thread(target=pomodoro, args=("Multithreaded timer 2", 4))
+~~~
+
+Our new threads just need to be started and we're off!
+
+~~~
+    pomodoro1.start()
+    pomodoro2.start()
+~~~
+
+At this point you'll notice that the second timer will finish before the first one as we would expect. We no longer have to wait for slow code to complete before starting shorter operations.

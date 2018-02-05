@@ -5,7 +5,6 @@ from threading import Thread
 import time
 
 def pomodoro(timer_name, set_time):
-    print("Pomodoro : " + timer_name + " start")
     cur_time = 0
     while cur_time < set_time:
         time.sleep(1)
@@ -22,5 +21,6 @@ p2 = Thread(target=pomodoro, args=("Multithreaded timer 2", 4))
 p1.start()
 p2.start()
 
+print(type(p1))
 print("Main Completed!")
 
